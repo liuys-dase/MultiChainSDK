@@ -41,7 +41,9 @@ ln -s ../../chainmaker-cryptogen/ .
 cd ../scripts
 
 # 生成单链4节点集群的证书和配置
-./prepare.sh 4 1
+# ./prepare.sh 4 1
+yes "" | head -n 4 | ./prepare.sh 4 1
+
 
 # step4. 编译及安装包制作
 ./build_release.sh
